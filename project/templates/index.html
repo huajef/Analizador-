@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+  <div class="conte">
+    <div class="opa">
+      <h1><b>INTERPRETE EXPERIMENTAL</b></h1>
+      <h2><b>Universidad del Magdalena</b> <br>Compiladores</h2>
+    </div>
+  </div>
+
+  <form class="form-vertical" action="/validador" method="POST">
+    <textarea class="form-control" name="message" rows="10" cols="30">BEGIN
+            a := 2,
+            b := 3,
+            z := 8,
+            WHILE b > 0 DO 
+              IF z > a THEN z := z + a,
+              a := 2 * a,
+              b := b / 2,
+            END
+    END</textarea>
+    <br><br>
+    {% block content%}
+
+    {% endblock %}
+    
+    <br><br>
+
+    <button type="submit" class="btn btn-primary"> Enviar </button>
+  </form>
+
+
+</body>
+
+</html>

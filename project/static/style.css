@@ -1,0 +1,33 @@
+body {
+   background-image: url(fondo_compa.jpeg);
+   
+   background-size: cover;
+    font-size: 15px;
+}
+
+h1{
+    
+    color: #00A5D5;
+    text-align: center;
+}
+h2{
+    color: #ffffff;
+    text-align: center;
+
+    height: 100px;
+}
+div.conte {
+  border: 2px solid black;
+  padding-top:  35px;
+}
+
+div.opa {
+  background-color: #000000;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+div.opa h1,h2 {
+  font-weight: bold;
+  color: #ffffff;
+}
